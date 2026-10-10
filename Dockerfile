@@ -21,5 +21,4 @@ COPY --from=build /app/dist ./dist
 RUN mkdir -p /app/data/images && chown -R node:node /app
 USER node
 EXPOSE 3000
-VOLUME ["/app/data"]
 CMD ["node", "dist/server.js"]
